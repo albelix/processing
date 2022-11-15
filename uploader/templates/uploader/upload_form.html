@@ -1,0 +1,23 @@
+<div style="padding:40px;margin:40px;border:1px solid #ccc">
+	<h1>Обработка данных</h1>
+	<form method="post" enctype="multipart/form-data">
+        Загрузка файла данных
+	  {% csrf_token %}
+	  {{ form.as_p }}
+        	  <button type="submit">Сохранить файл данных</button>
+	</form>
+	<form method="post" enctype="multipart/form-data">
+        Загрузка файла событий
+	  {% csrf_token %}
+	  {{ form.as_p }}
+	  <button type="submit">Сохранить файл событий</button>
+	</form>
+    <hr>
+	<ul>
+	</ul>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="run">Запустить скрипт</button>
+</form>
+</div>
